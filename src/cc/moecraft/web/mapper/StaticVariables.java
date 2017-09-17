@@ -8,7 +8,7 @@ package cc.moecraft.web.mapper;
  */
 public class StaticVariables
 {
-    private static Settings settings = new Settings("0.0.1");
+    private static Settings settings = new Settings("0.0.2");
 
     public static Settings getSettings()
     {

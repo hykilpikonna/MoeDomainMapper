@@ -32,4 +32,15 @@ public class Settings extends Config
     {
         addDefault("hydev.org", "/hydev/");
     }
+
+    private void addDefault(String path, String value)
+    {
+        super.addDefault(path, value.replace(".", "%DOT%"));
+    }
+
+    @Override
+    public String getString(String path)
+    {
+        return super.getString(path).replace("%DOT%", ".");
+    }
 }

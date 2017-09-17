@@ -10,7 +10,7 @@
     function load()
     {
         <%
-            String domain = request.getServerName().replaceAll(".*\\.(?=.*\\.)", "");
+            String domain = request.getServerName().replaceAll(".*\\.(?=.*\\.)", "").replace(".", "%DOT%");
             if (StaticVariables.getSettings().contains(domain))
             {
                 %> window.location.href = <%=StaticVariables.getSettings().getString(domain) %> <%
